@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<title>&lt;on-line&gt; tests</title>
+<link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+
+<div id="mocha"></div>
+
+<template>
+  <on-line>
+    <div slot="online">Yes</div>
+    <div slot="offline">No</div>
+  </on-line>
+</template>
+
+<div id="host"></div>
+
+<script src="../node_modules/mocha/mocha.js"></script>
+<script type="module">
+   mocha.setup('bdd')
+</script>
+<script type="module" src="./test.js"></script>
+<script type="module">
+  mocha.run();
+</script>

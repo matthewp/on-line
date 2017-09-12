@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<title>&lt;on-line&gt; demo</title>
+
+<on-line>
+  <div slot="online">✔︎</div>
+  <div slot="offline">𝘟</div>
+</on-line>
+
+<div id="statusel"></div>
+
+<script type=module src="./online.js"></script>
+<script type=module>
+  let el = document.querySelector('on-line');
+  el.addEventListener('change', ev => {
+    let online = ev.detail;
+    statusel.textContent = `You are ${online ? 'not' : ''} offline`;
+  })
+</script>
